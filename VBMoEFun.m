@@ -1,28 +1,5 @@
 %%%%%%%%% fit a mixture model via Variational inference. 
 function [out_model, prob_model, Z, L] = VBMoEFun(X, VBParams, IS_SHOW)
-if nargin == 0
-    close all; clear all; 
-    addpath(genpath('D:\MatlabPros\PRMLT')); 
-    rng('default');
-    rng(2000);
-    params = [];
-    params.USE_OLD_FAITH = 0;
-    params.K = 1;
-    params.N = 10000;
-    params.zeroMean = 1; 
-    [X, outParams] = generateDataFun(params); 
-    VBParams = [];
-    SPV = 2.0; [2.0 2.0 2.0 2.0 2.0]; 
-    VBParams.K0      = length(SPV); 
-    VBParams.maxIter = 3000; 
-    VBParams.tol     = 1e-8; 
-    VBParams.SPV    = SPV;
-    VBParams.alpha  = 1e-2; 1e-1; 
-    VBParams.a      = 1.0; 
-    VBParams.b      = 1.0; 
-    VBParams.reduceNum = 1e6; 
-    VBParams.EP_Plus = 0; 
-end
 if isrow(X)
     X = X'; 
 end
