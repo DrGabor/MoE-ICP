@@ -1,6 +1,6 @@
 # MoE-ICP
 
-The backbone MATLAB code of MoE-ICP [1] is illustrated in this repository. The MoE-ICP employs a variational inference framework and includes widely-used metric distances such as point-to-point, point-to-plane and plane-to-plane, which can be viewed as an extension of MiNoM [2]. Currently, the variational inference (VI) in VBMoEFun.m is missing owing to the review process of MoE-ICP, and we will release it as soon as the change of status. Albeit, the readers can inspect the pipeline and details of MoE-ICP as follows:
+The backbone MATLAB code of MoE-ICP [1] is illustrated in this repository. The MoE-ICP employs a variational inference framework and includes widely-used metric distances such as point-to-point, point-to-plane and plane-to-plane, which can be viewed as an extension of MiNoM [2]. If you cannot run the code, some missing functions like Loc2Glo() are in the repository of DrGabor/LiDAR/CommonFunctions. The readers can inspect the pipeline and details of MoE-ICP as follows:
 
 1. The residual errors and information matrices of plane-to-plane distance are illustrated in compute_statisticsFun.m.
 
