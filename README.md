@@ -1,12 +1,10 @@
 # MoE-ICP
 
-The backbone MATLAB code of MoE-ICP [1] is illustrated in this repository. The MoE-ICP employs a variational inference framework and includes widely-used metric distances such as point-to-point, point-to-plane and plane-to-plane, which can be viewed as an extension of MiNoM [2]. If you cannot run the code, some missing functions like Loc2Glo() are in the repository of DrGabor/LiDAR/CommonFunctions. The readers can inspect the pipeline and details of MoE-ICP as follows:
+The backbone MATLAB code of MoE-ICP [1] is illustrated in this repository, and the registration can be seen by runing the file of main_demo.m. The MoE-ICP employs a variational inference framework and includes widely-used metric distances such as point-to-point, point-to-plane and plane-to-plane, which can be viewed as an extension of MiNoM [2]. If you cannot run the code, some missing functions like Loc2Glo() and SkewFun() are in the repository of DrGabor/LiDAR/CommonFunctions. The implementation of VBMoEFun() and IRLSFun() will be released in the near future. Albeit, the readers can inspect the pipeline and details of MoE-ICP as follows:
 
-1. The residual errors and information matrices of plane-to-plane distance are illustrated in compute_statisticsFun.m.
+1. The residual errors and information matrices of plane-to-plane distance are illustrated in compute_statisticsFun() and computeCovFun().
 
-2. The iteratively re-weighted least-squares (IRLS) is illustrated in IRLSFun.m.
-
-3. The vector-to-vector operations with the help of MATLAB symbolic toolbox are illustrated in CalHbFun.m. 
+2. The vector-to-vector operations with the help of MATLAB symbolic toolbox are illustrated in CalHbFun(). 
 
 For background of variational inference, the manuscript titled "A Brief Note on Variational Inference" is provided. 
 
